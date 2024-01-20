@@ -4,7 +4,7 @@
 #define SCREEN_WIDTH 1280
 #define SCREEN_HEGIHT 900
 
-#define SHADER_NAME "resources/trippy_image.frag"
+#define SHADER_NAME "resources/fractal.frag"
 
 int main(void) {
   InitWindow(SCREEN_WIDTH, SCREEN_HEGIHT, "Fractal Voyager");
