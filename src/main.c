@@ -23,6 +23,17 @@ int main(void) {
   int shader_time_location = GetShaderLocation(shader, "time");
   float time = 0.0;
 
+  int shader_player_position_location =
+      GetShaderLocation(shader, "player_position");
+  float position[3] = {0.0, 0.0, -2.0};
+  SetShaderValue(shader, shader_player_position_location, position,
+                 SHADER_UNIFORM_VEC3);
+
+  int light_position_location = GetShaderLocation(shader, "light_position");
+  float light_position[3] = {2.0, -5.0, 3.0};
+  SetShaderValue(shader, light_position_location, light_position,
+                 SHADER_UNIFORM_VEC3);
+
   SetTargetFPS(60);
 
   while (!WindowShouldClose()) {
